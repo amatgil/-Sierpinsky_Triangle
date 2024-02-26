@@ -49,4 +49,4 @@ To get started with this project, follow the [Usage](#usage) instructions. Feel 
 
 ## Credits:
 
-Special thanks to ChatGPT for writting this README file <3
+Special thanks to ChatGPT for writting this README file lol
