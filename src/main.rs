@@ -29,7 +29,7 @@ fn main() {
     let n = 8;
     let r = unsafe { sierpinsky_extern(n) };
     let width = 2usize.pow(n as u32);
-    let height = 2usize.pow(n as u32 -1);
+    let height = 2usize.pow(n as u32 - 1);
 
     let mut new_arr = vec![0; r.len as usize]; // IF WE DON'T COPY IT FIRST, THE IMAGE DATA OVERRIDES THE FUCKING DATA (because vector gets
                                                // freed when the scope ends, so the memory is marked as free. If I cared, I would malloc extra
