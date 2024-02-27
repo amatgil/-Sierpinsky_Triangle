@@ -28,11 +28,13 @@ This program does not generate it using this definition: instead, it draws itsel
 
 ```bash
 just authenticate # If you're using ssh-agent but it's not running, only
-just run 
+just run 6
 ```
 Authentication may be done via `ssh-agent` or [using this workaround in `.cargo/config.toml`](https://github.com/rust-lang/cargo/issues/2078).
 
 (this does require having [just](https://github.com/casey/just) installed on the system).
+
+`6` could be any number: it's the number of recursive iterations that will be done to generate the fractal. The images get noticeably heavy at around 12 or 13.
 
 ## Getting Started
 

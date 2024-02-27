@@ -15,12 +15,14 @@ pub(crate) fn idx_to_coords(i: usize, w: usize) -> (usize, usize) { (i % w, i / 
 const BG: Pixel = Pixel::new(36, 39, 58);
 const EMPTY: Pixel = BG;
 const LEFT_STICK: Pixel = Pixel::new(166, 218, 149);
-const RIGHT_STICK: Pixel = Pixel::BLACK; // Neat shadows!
+const RIGHT_STICK: Pixel = LEFT_STICK; //Pixel::BLACK; // Neat shadows if set to a dark color!
 const GARBAGE: Pixel = Pixel::PURPLE;
 
 fn main() {
-    let n = 10;
-    let r = unsafe { sierpinsky_extern(n) };
+    let args: Vec<String> = std::env::args().collect();
+    let n: usize = args.get(1).expect("You forgot to provide n!")
+        .parse().expect("n (first argument) must be a positive number");
+    let r = unsafe { sierpinsky_extern(n as i32) };
     let width = 2usize.pow(n as u32);
     let height = 2usize.pow(n as u32);
 
