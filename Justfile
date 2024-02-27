@@ -1,9 +1,9 @@
 buildcc:
 	g++ -o libSierp.a -shared SierpinskyTriangle.cc
 
-buildr:
-	just buildcc
-	rustc -L"." -l"Sierp" src/main.rs
+authenticate:
+	eval `ssh-agent -s`
+	ssh-add
 
 build:
 	just buildcc
