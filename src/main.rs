@@ -29,21 +29,24 @@ fn main() {
     let n = 8;
     let r = unsafe { sierpinsky_extern(n) };
     let width = 2usize.pow(n as u32);
-    let height = 2usize.pow(n as u32 - 1);
+    let height = 2usize.pow(n as u32);
 
     let mut new_arr = vec![0; r.len as usize]; // IF WE DON'T COPY IT FIRST, THE IMAGE DATA OVERRIDES THE FUCKING DATA (because vector gets
                                                // freed when the scope ends, so the memory is marked as free. If I cared, I would malloc extra
                                                // memory in C++ and copy over the data there, because malloc'd data doesn't get autodestructed),
                                                // AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+
     for i in 0..(r.len) {
         let k = unsafe { *(r.ptr.add(i as usize)) };
         new_arr[i as usize] = k;
     }
+
     let mut img = ImagePPM::new(width, height, BG);
 
-    for i in 0..(r.len) {
-        let (x, y) = idx_to_coords(i as usize, width);
-        let k = new_arr[i as usize];
+    for i in 0..(r.len as usize) {
+        let (x, y) = idx_to_coords(i, width);
+        let k = new_arr[i];
         let col = match k {
             1 => EMPTY,
             2 => LEFT_STICK,
@@ -51,8 +54,10 @@ fn main() {
             _ => GARBAGE,
         };
         //println!("val {i} = 0x{:X} => {col:?}", k);
-        *img.get_mut(x, height - y - 1).unwrap() = col;
+        *img.get_mut(x, height - y*2 - 2).unwrap() = col;
+        *img.get_mut(x, height - y*2 - 1).unwrap() = col;
     }
+
 
     img.save_to_file(format!("triangle-{}.ppm", n)).unwrap();
 }

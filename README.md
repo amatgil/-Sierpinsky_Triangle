@@ -14,7 +14,7 @@ This C++/Rust program allows you to generate and visualize the Sierpinski Triang
 
 The Sierpinski Triangle is a fractal named after the Polish mathematician Wacław Sierpiński. It is formed by recursively subdividing an equilateral triangle into smaller equilateral triangles. This program provides a simple and customizable way to draw the Sierpinski Triangle.
 
-This program does not generate it using this definition: instead, it draws itself in recursively from nothing using the simple base pattern "`XX`".
+This program does not generate it using this definition: instead, it draws itself in recursively from nothing using the simple base pattern "`XX`". This _would_ make it twice as wide as it is tall, but by simply drawing each row twice, pixels become 2x2 squares, making the whole image a square itself.
 
 ## Usage
 
