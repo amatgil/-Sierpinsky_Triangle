@@ -6,7 +6,6 @@ crate-type = ["dylib"]
 rustflags = ["-L", ".", "-l", "Sierp"]
 
 [dependencies]
-libc = "0.2.0"
 ppmitzador = { git = "ssh://git@ilsrv.com:6722/Amat/ppmitzador.git" }
 
 
