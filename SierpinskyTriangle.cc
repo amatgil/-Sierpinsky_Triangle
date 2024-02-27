@@ -92,9 +92,9 @@ extern "C" {
 		result.ptr = &j[0];
 		result.sz = j.size();
 
-		for (int i = 0; i < result.sz; ++i) {
-			printf("i = %d: %d\n",i, *(result.ptr + i));
-		}
+		//for (int i = 0; i < result.sz; ++i) {
+		//	printf("i = %d: %d\n",i, *(result.ptr + i));
+		//}
 		printf("@: %p\n", result.ptr);
 		printf("sz: %d\n", result.sz);
 

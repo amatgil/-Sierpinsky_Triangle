@@ -13,7 +13,7 @@ extern "C" {
 }
 
 fn main() {
-    let n = 5;
+    let n= 4;
     let r = unsafe { sierpinsky_extern(n) };
     //dbg!(&r);
     println!("points to {}", unsafe {*r.ptr });
