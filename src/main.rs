@@ -19,14 +19,14 @@ pub(crate) fn idx_to_coords(i: usize, w: usize) -> (usize, usize) {
     i / w, 
     )
 }
-const BG: Pixel = Pixel::new(0, 0, 0);
+const BG: Pixel = Pixel::new(54, 58, 79);
 const EMPTY: Pixel = BG;
-const LEFT_STICK: Pixel = Pixel::WHITE;
-const RIGHT_STICK: Pixel = Pixel::WHITE;
+const LEFT_STICK: Pixel = Pixel::new(237, 135, 150); //Pixel::new(202, 211, 245);
+const RIGHT_STICK: Pixel = LEFT_STICK;
 const GARBAGE: Pixel = Pixel::PURPLE;
 
 fn main() {
-    let n = 6;
+    let n = 8;
     let r = unsafe { sierpinsky_extern(n) };
     println!("points to {}", unsafe {*r.ptr });
 
