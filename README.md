@@ -1,6 +1,6 @@
 # Sierpinski Triangle Drawing Program
 
-This C++ program allows you to generate and visualize the Sierpinski Triangle.
+This C++/Rust program allows you to generate and visualize the Sierpinski Triangle.
 
 ## Table of Contents
 
@@ -8,45 +8,36 @@ This C++ program allows you to generate and visualize the Sierpinski Triangle.
 - [Features](#features)
 - [Usage](#usage)
 - [Getting Started](#getting-started)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
 
 The Sierpinski Triangle is a fractal named after the Polish mathematician Wacław Sierpiński. It is formed by recursively subdividing an equilateral triangle into smaller equilateral triangles. This program provides a simple and customizable way to draw the Sierpinski Triangle.
 
-## Features
-
-- Generate Sierpinski Triangles of varying depth.
-- Customize colors and visual aspects of the generated triangles.
-- Simple and efficient C++ implementation.
+This program does not generate it using this definition: instead, it draws itself in recursively from nothing using the simple base pattern "`XX`".
 
 ## Usage
 
-1. **Clone the Repository:**
+1. **Clone:**
 
-    ```bash
-    git clone https://github.com/your-username/sierpinski-triangle.git
-    ```
+```bash
+    git clone https://git.ilsrv.com/Gerysto/Sierpinsky_Triangle.git
+```
 
-2. **Compile the Program:**
+3. **Compile and run:**
 
-    ```bash
-    g++ sierpinski.cpp -o sierpinski
-    ```
+```bash
+just authenticate # If you're using ssh-agent but it's not running, only
+just run 
+```
+Authentication may be done via `ssh-agent` or [using this workaround in `.cargo/config.toml`](https://github.com/rust-lang/cargo/issues/2078).
 
-3. **Run the Program:**
-
-    ```bash
-    ./sierpinski
-    ```
-
-4. **Follow on-screen instructions to customize and generate the Sierpinski Triangle.**
+(this does require having [just](https://github.com/casey/just) installed on the system).
 
 ## Getting Started
 
-To get started with this project, follow the [Usage](#usage) instructions. Feel free to explore the source code in `sierpinski.cpp` to understand the implementation details.
+To get started with this project, follow the [Usage](#usage) instructions. The generation is done at `SierpinskyTriangle.cc` while the drawing in of the image is done in the `main.rs` file.
 
-## Credits:
+## License
 
-Special thanks to ChatGPT for writting this README file lol
+This project and all files contained therein and licensed under the [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt) license (see COPYING file).

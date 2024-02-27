@@ -1,0 +1,11 @@
+[package]
+name = "imaging_fractals"
+version = "0.1.0"
+edition = "2021"
+crate-type = ["dylib"]
+rustflags = ["-L", ".", "-l", "Sierp"]
+
+[dependencies]
+ppmitzador = { git = "ssh://git@ilsrv.com:6722/Amat/ppmitzador.git" }
+
+
