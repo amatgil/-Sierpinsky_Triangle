@@ -7,3 +7,4 @@ rustflags = ["-L", ".", "-l", "Sierp"]
 
 [dependencies]
 libc = "0.2.0"
+ppmitzador = { path = "../../ppmitzador" }
