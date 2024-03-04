@@ -21,7 +21,7 @@ This program does not generate it using this definition: instead, it draws itsel
 1. **Clone:**
 
 ```bash
-    git clone https://git.ilsrv.com/Gerysto/Sierpinsky_Triangle.git
+git clone https://git.ilsrv.com/Gerysto/Sierpinsky_Triangle.git
 ```
 
 3. **Compile and run:**
@@ -30,8 +30,6 @@ This program does not generate it using this definition: instead, it draws itsel
 just authenticate # If you're using ssh-agent but it's not running, only
 just run 
 ```
-Authentication may be done via `ssh-agent` or [using this workaround in `.cargo/config.toml`](https://github.com/rust-lang/cargo/issues/2078).
-
 (this does require having [just](https://github.com/casey/just) installed on the system).
 
 ## Getting Started
