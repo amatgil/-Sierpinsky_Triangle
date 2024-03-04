@@ -21,7 +21,7 @@ This program does not generate it using this definition: instead, it draws itsel
 1. **Clone:**
 
 ```bash
-    git clone https://git.ilsrv.com/Gerysto/Sierpinsky_Triangle.git
+    git clone  https://github.com/amatgil/Sierpinsky_Triangle
 ```
 
 3. **Compile and run:**
