@@ -8,7 +8,7 @@ authenticate:
 build:
 	just buildcc
 	cargo rustc -- -L"." -l"Sierp"
-run:
+run n:
 	just build
-	LD_LIBRARY_PATH="." ./target/debug/imaging_fractals
+	LD_LIBRARY_PATH="." ./target/debug/imaging_fractals {{n}}
 

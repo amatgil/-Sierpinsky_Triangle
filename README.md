@@ -14,23 +14,25 @@ This C++/Rust program allows you to generate and visualize the Sierpinski Triang
 
 The Sierpinski Triangle is a fractal named after the Polish mathematician Wacław Sierpiński. It is formed by recursively subdividing an equilateral triangle into smaller equilateral triangles. This program provides a simple and customizable way to draw the Sierpinski Triangle.
 
-This program does not generate it using this definition: instead, it draws itself in recursively from nothing using the simple base pattern "`XX`".
+This program does not generate it using this definition: instead, it draws itself in recursively from nothing using the simple base pattern "`XX`". This _would_ make it twice as wide as it is tall, but by simply drawing each row twice, pixels become 2x2 squares, making the whole image a square itself.
 
 ## Usage
 
 1. **Clone:**
 
 ```bash
-git clone https://git.ilsrv.com/Gerysto/Sierpinsky_Triangle.git
+git clone https://github.com/amatgil/Sierpinsky_Triangle
 ```
 
 3. **Compile and run:**
 
 ```bash
 just authenticate # If you're using ssh-agent but it's not running, only
-just run 
+just run 6
 ```
 (this does require having [just](https://github.com/casey/just) installed on the system).
+
+`6` could be any number: it's the number of recursive iterations that will be done to generate the fractal. The images get noticeably heavy at around 12 or 13.
 
 ## Getting Started
 

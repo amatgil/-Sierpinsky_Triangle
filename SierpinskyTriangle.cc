@@ -54,7 +54,7 @@ Matriu sierpinsky(uint32_t n) {
 }
 
 struct OneDArray {
-  char* ptr;
+  unsigned char* ptr;
   uint32_t sz;
 };
 
@@ -75,15 +75,17 @@ extern "C" {
 		vector<vector<unsigned char>> m = sierpinsky(n);
 		vector<char> j = flatten(m);
 
+
+		unsigned char* copied_data = (unsigned char*)malloc(j.size()); // chars are 1 byte long
+		for (int i = 0; i < j.size(); ++i) *(copied_data + i) = j[i];
+
 		OneDArray result;
-		result.ptr = &j[0];
+		result.ptr = copied_data;
 		result.sz = j.size();
 
-		printf("@: %p\n", result.ptr);
+		printf("@: %p (instead of %p)\n", result.ptr, &j[0]);
 		printf("sz: %d\n", result.sz);
 
 		return result;
 	}
 }
-
-
