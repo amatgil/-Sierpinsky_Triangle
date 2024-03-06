@@ -7,7 +7,7 @@ This C++/Rust program allows you to generate and visualize the Sierpinski Triang
 - [Introduction](#introduction)
 - [Features](#features)
 - [Usage](#usage)
-- [Getting Started](#getting-started)
+- [Internals](#internals)
 - [License](#license)
 
 ## Introduction
@@ -33,21 +33,19 @@ rather not repeat
 git clone https://github.com/amatgil/Sierpinsky_Triangle
 ```
 
-3. **Compile and run:**
+2. **Compile and run:**
 
 ```bash
-just authenticate # If you're using ssh-agent but it's not running, only
 just run 6
 ```
-(this does require having [just](https://github.com/casey/just) installed on the system).
+`6` is be any non-negative integer: the number of recursive iterations that will be done to generate
+the fractal. The images get noticeably heavy at the resolutions around which levels like 12 or 13 
+become noticeable.
 
-`6` could be any number: it's the number of recursive iterations that will be done to generate
-the fractal. The images get noticeably heavy at around 12 or 13.
+## Internals
 
-## Getting Started
-
-To get started with this project, follow the [Usage](#usage) instructions. The generation is done
-at `SierpinskyTriangle.cc` while the drawing in of the image is done in the `main.rs` file.
+The generation is done at `SierpinskyTriangle.cc`, the drawing and saving of the image
+is done in at `src/main.rs` file.
 
 ## License
 
