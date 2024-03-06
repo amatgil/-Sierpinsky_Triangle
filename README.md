@@ -44,8 +44,8 @@ become noticeable.
 
 ## Internals
 
-The generation is done at `SierpinskyTriangle.cc`, the drawing and saving of the image
-is done in at `src/main.rs` file.
+The generation is done in `SierpinskyTriangle.cc`, the drawing and saving of the image
+is done in in the `src/main.rs` file.
 
 ## License
 
